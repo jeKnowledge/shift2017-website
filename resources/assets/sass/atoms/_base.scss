@@ -1,0 +1,166 @@
+/*
+--------------------------------------------------------------------------------
+HTML elements look n feel
+--------------------------------------------------------------------------------
+*/
+html {
+  /* base font-size is at reset.scss */
+  // @include phablet { @include retina(1.3) { font-size: 85%; } }
+  // @include tablet  { @include retina(1.5) { font-size: 90%; } }
+  // @include desktop { @include retina(2)   { font-size: 90%; } }
+  // @include hd      { @include retina(1.5) { font-size: 130%; } }
+}
+
+body {
+  background-color: $dark;
+  color: $dark;
+  font: normal 400 1.8rem/2.8rem 'Asap', sans-serif;
+  letter-spacing: -.001em;
+}
+html,body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 6rem;
+  letter-spacing: 0em;
+  line-height: 140%;
+  position: relative;
+  @include desktop {
+    font-size: 15rem;
+  }
+  &:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -0.6rem;
+    left: 0.8rem;
+    color: transparent;
+    -webkit-text-stroke-width: 0.3rem;
+    -webkit-text-stroke-color: $dark;
+  }
+}
+
+
+span.shift-appens {
+  position: relative;
+  &:after {
+    content: 'SHIFT APPENS';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -0.3rem;
+    left: 0.4rem;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: $light;
+  }
+}
+
+h1.shift-appens {
+  &:after {
+    content: 'SHIFT APPENS';
+  }
+}
+
+h1.programa {
+  &:after {
+    content: 'PROGRAMA';
+  }
+}
+
+h1.faq {
+  &:after {
+    content: 'FAQ';
+  }
+}
+
+h1.sobre {
+  &:after {
+    content: 'SOBRE';
+  }
+}
+
+h1.competicao {
+  &:after {
+    content: 'COMPETICAO';
+  }
+}
+
+h3 {
+  font-size: 3.9rem;
+  margin-bottom: 6rem;
+  letter-spacing: 0.08rem;
+}
+
+h4 {
+  @include transition();
+  font-size: 2.5rem;
+  font-weight: normal;
+  letter-spacing: 0.05rem;
+  &:hover {
+    @include transition();
+    color: $yellow;
+  }
+}
+
+main>div {
+  padding: 7rem 5%;
+  @include transition();
+
+  @include tablet {
+    @include transition();
+    padding: 10rem 10%;
+  }
+  @include hd {
+    @include transition();
+    padding: 10rem 20%;
+  }
+}
+section {
+  padding: 5rem 0;
+}
+
+
+span {
+  display: inline-block;
+}
+
+a {
+  @include transition();
+  cursor: pointer;
+  text-decoration: none;
+  // border-bottom: solid rgba(0,0,0,0) 2px;
+  &:hover { text-decoration: underline;}
+}
+
+b, .b {
+  font-weight: 600;
+  // font-weight: bold;
+}
+
+strong {
+  font-weight: 800;
+}
+
+i {
+  font-style: italic;
+}
+
+img {
+  // width: 100%;
+  // height: auto;
+}
+
+
+p::selection {
+  background-color: rgba($yellow, 0.6);
+}
+
+.juri {
+  height: 200px;
+}

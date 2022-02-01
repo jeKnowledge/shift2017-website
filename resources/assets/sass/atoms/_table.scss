@@ -1,0 +1,26 @@
+table.table {
+	thead {
+		border-bottom: 1px solid $dark;
+		font-weight: bold;
+	}
+
+	tbody {
+
+	}
+
+	td {
+		padding: 5px 0;
+	}
+}
+
+table.table-hover {
+	tbody {
+		tr:hover {
+			background-color: rgba(65,65,65,0.1);
+			cursor: pointer;
+		}
+		tr.selected {
+			background-color: rgba(65,65,65,0.1);
+		}
+	}
+}

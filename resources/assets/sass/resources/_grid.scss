@@ -1,0 +1,64 @@
+/*
+--------------------------------------------------------------------------------
+Grid system based on three / four columns
+--------------------------------------------------------------------------------
+*/
+.half, .third, .two-thirds, .quarter {
+  // float: left;
+  // position: relative;
+  width: 100%;
+}
+
+.half {
+  @include desktop { width: 45%; }
+}
+
+.third {
+  @include desktop { width: 33%; }
+}
+
+.two-thirds {
+  @include desktop { width: 66.666%; }
+}
+
+.quarter {
+  @include tablet { width: 50%; }
+  @include desktop { width: 25%; }
+}
+
+.mx-100 {
+  @include transition();
+  width: 90%;
+  @include phablet  { width: 90%; max-width: 90rem; }
+  @include tablet   { width: 85%; max-width: 90rem; }
+  @include desktop  { width: 70%; max-width: 90rem; }
+}
+
+/*
+--------------------------------------------------------------------------------
+Flex helpers
+--------------------------------------------------------------------------------
+*/
+
+.flex { display: flex; }
+.wrap { flex-wrap: wrap;}
+
+.dir-row        { flex-direction: row; }
+.dir-column     { flex-direction: column; }
+
+.jus-center     { justify-content: center; }
+.jus-around     { justify-content: space-around; }
+.jus-between    { justify-content: space-between; }
+.jus-start      { justify-content: flex-start; }
+.jus-end        { justify-content: flex-end; }
+
+.al-center      { align-items: center; }
+.al-around      { align-items: space-around; }
+.al-between     { align-items: space-between; }
+.al-start       { align-items: flex-start; }
+.al-end         { align-items: flex-end; }
+
+
+.self-center    { align-self: center; }
+.self-start     { align-self: flex-start; }
+.self-end       { align-self: flex-end; }

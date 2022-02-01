@@ -1,0 +1,184 @@
+.dashboard {
+  background-color: $white;
+
+  h5 {
+    font-size: 2rem;
+  }
+
+  header {
+    padding-left: 28rem;
+    z-index: 10;
+    @include transition(0);
+    input[type="search"] {
+      background-color: rgba($white, 0.7);
+      border: solid transparent 1px;
+      padding: 0.8rem 1rem;
+      font-size: 1.5rem;
+      border-radius: $radius/2;
+      &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        color:    $dark;
+        opacity:  1;
+      }
+      &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color:    $dark;
+        opacity:  1;
+      }
+      &::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color:    $dark;
+        opacity:  1;
+      }
+      &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color:    $dark;
+        opacity:  1;
+      }
+    }
+  }
+
+  main {
+    @include transition(0);
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: $white;
+    padding-top: 8rem;
+    height: 100%;
+  }
+
+  .dash-menu {
+    position: fixed;
+    width: 100%;
+    margin-top: -8rem;
+    z-index: 15;
+    @include desktop {
+      width: 25rem;
+      min-height: 100%;
+    }
+
+    a {
+      padding: 2.5rem 2rem;
+      text-transform: uppercase;
+      color: $light;
+      font-weight: 600;
+      font-size: 2rem;
+      letter-spacing: 0.05rem;
+      &:hover {
+        background-color: rgba($dark, 0.15);
+        text-decoration: none;
+        color: rgba($light, 0.5);
+      }
+
+      &.selected {
+        border-left: solid $blue 0.5rem;
+      }
+      &.logout {
+        padding: 0;
+        font-size: 1.5rem;
+      }
+    }
+    .user {
+      padding: 2.5rem 2rem;
+      text-transform: uppercase;
+      color: $light;
+      font-weight: 600;
+      font-size: 2rem;
+      letter-spacing: 0.05rem;
+      .name {
+        font-size: 1.5rem;
+      }
+      .email {
+        font-size: 1rem;
+      }
+    }
+
+    div {
+      background-color: rgba($light, 0.1);
+      padding: 1rem 2rem;
+
+      img {
+        height: 7rem;
+        width: 7rem;
+      }
+    }
+  }
+
+  .dash-content {
+    margin-left: 20rem;
+    padding: 10rem 10%;
+    @include transition(0);
+  }
+
+  a {
+    h2 {
+      font-size: 2.9rem;
+      // height: 8rem;
+      position: relative;
+      line-height: 105%;
+      padding: 0;
+      &:after {
+        @include transition();
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0.3rem;
+        left: -0.4rem;
+        content: 'SHIFT APPENS';
+        color: transparent;
+        -webkit-text-stroke-width: 0.1rem;
+        -webkit-text-stroke-color: $light;
+      }
+    }
+    &:hover {
+      text-decoration: none;
+
+      h2:after {
+        @include transition();
+        top: -0.3rem;
+        left: 0.4rem;
+      }
+    }
+  }
+}
+
+#tabs {
+  .tab-content {
+    display: none;
+  }
+
+  .tab-content.selected {
+    display: flex;
+  }
+}
+
+.edit-profile, .edit-team {
+  .form {
+    input[type="radio"] {
+      margin-top: 0.5rem;
+    }
+    label {
+      font-weight: 500;
+    }
+  }
+  .header {
+    border-bottom: 3px solid $dark;
+    margin-bottom: 1.25rem;
+  }
+  a {
+    &.button:hover {
+      color: $blue;
+    }
+  }
+}
+
+label {
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.9;
+  @include desktop  { display: none; }
+}

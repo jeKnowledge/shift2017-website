@@ -1,0 +1,86 @@
+.button {
+  background-color: $blue;
+  color: $white;
+  border-radius: $radius/2;
+  text-transform: uppercase;
+  letter-spacing: 0.06rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+  padding: 1rem 3rem;
+  font-family: 'Asap', sans-serif;
+  border: solid $blue 0.2rem;
+  line-height: 28px;
+
+  &:hover {
+    @include transition();
+    cursor: pointer;
+    background-color: rgba($blue, 0.8);
+  }
+}
+
+.button.button-border {
+  padding: 1rem 3rem;
+  background-color: $light;
+  color: $blue;
+  border: solid $blue 0.2rem;
+  &:hover {
+    background-color: rgba($blue, 0.1);
+  }
+  &.selected {
+    background-color: $blue;
+    color: $white;
+    &:hover {
+      @include transition();
+      cursor: pointer;
+      background-color: rgba($blue, 0.8);
+    }
+  } 
+}
+
+.button.auth {
+  padding: 1rem 0;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+
+.button.programa {
+  @include transition();
+  background-color: transparent;
+  color: $red;
+  border: solid $red 0.2rem;
+  width: 90%;
+  margin: 1rem 0;
+  text-align: center;
+  &:hover {
+    @include transition();
+    background-color: $red;
+    color: $dark;
+  }
+  &.selected {
+    background-color: $red;
+    color: $dark;
+  }
+  @include desktop { margin: 0; }
+}
+
+.button.button-regulation {
+  padding: 1rem 3rem;
+  background-color: transparent;
+  color: $red;
+  border: solid $red 0.2rem;
+  text-decoration: none;
+  &:hover {
+    background-color: $red;
+    color: $dark;
+  }
+  &.selected {
+    background-color: $red;
+    color: $white;
+    &:hover {
+      @include transition();
+      cursor: pointer;
+      background-color: rgba($red, 0.8);
+    }
+  } 
+}

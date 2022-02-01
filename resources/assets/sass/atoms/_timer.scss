@@ -1,0 +1,18 @@
+.timer {
+  letter-spacing: 0.05rem;
+  // font-weight: 600;
+  font: normal 400 3.5rem/6rem 'Asap';
+  @include desktop {
+    font: normal 400 10rem/16rem 'Asap';
+  }
+}
+
+
+.timer-platform {
+  letter-spacing: 0.05rem;
+  // font-weight: 600;
+  font: normal 400 1.5rem/4rem 'Asap';
+  @include desktop {
+    font: normal 400 2rem/4rem 'Asap';
+  }
+}

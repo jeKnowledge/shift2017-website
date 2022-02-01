@@ -1,0 +1,22 @@
+/*
+--------------------------------------------------------------------------------
+Open Sans, sans-serif
+light: 300
+semi-bold: 600
+extra-bold: 800
+--------------------------------------------------------------------------------
+*/
+@import 'https://fonts.googleapis.com/css?family=Asap:400,500,700&subset=latin-ext';
+
+@font-face {
+    font-family: Mopster;
+    src: url('../fonts/Mopster-Regular.otf');
+}
+
+.mopster {
+  font-family: 'Mopster', sans-serif;
+}
+
+.asap {
+  font-family: 'Asap', sans-serif;
+}

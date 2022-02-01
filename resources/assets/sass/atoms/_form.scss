@@ -1,0 +1,104 @@
+form {
+  position: relative;
+
+  input {
+    margin: 3rem 0;
+    font-family: 'Asap', sans-serif;
+  }
+
+  input[type='email'], input[type='password'], input[type='text'] {
+    // width: 100%;
+    border-bottom: solid $dark 0.3rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.6rem;
+
+    &:focus, &:not([value=""]) {
+      @include transition(0.3);
+      border-color: $blue;
+    }
+  }
+
+  textarea {
+    border: solid $dark 0.3rem;
+    border-radius: $radius/2;
+    padding: 1rem;
+    font-size: 1.6rem;
+    width: 100%;
+    line-height: 140%;
+
+    &:focus,
+    &:not([value=""]) {
+      @include transition();
+      border-color: $blue;
+    }
+  }
+
+  select {
+    background-color: $white;
+    border: solid $dark 0.3rem;
+    font-size: 1.6rem;
+    padding: 1.5rem 10rem;
+
+  }
+
+  .profile {
+    position: relative;
+    height: 15rem;
+    width: 15rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    &:after {
+      @include transition();
+      content:'UPLOAD';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      background-color: rgba($dark, 0.7);
+      border: solid $blue 0.3rem;
+      border-radius: $radius*2;
+      color: $blue;
+      font-weight: bold;
+      opacity: 0;
+      text-align: center;
+      box-sizing: border-box;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    &:hover {
+      @include transition();
+        border-color: $white;
+      &:after {
+        @include transition();
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// ::-webkit-input-placeholder {
+//   color: rgba($dark,0.6);
+// }
+//
+// :-moz-placeholder { /* Firefox 18- */
+//   color: rgba($dark,0.6);
+// }
+//
+// ::-moz-placeholder {  /* Firefox 19+ */
+//   color: rgba($dark,0.6);
+// }
+//
+// :-ms-input-placeholder {
+//   color: rgba($dark,0.6);
+// }
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */

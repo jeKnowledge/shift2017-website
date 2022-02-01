@@ -1,0 +1,16 @@
+.candidatura {
+  @include transition(0);
+  form {
+    padding: 5rem;
+    border: solid $blue 3px;
+    label {
+      font-weight: 500;
+    }
+    input[type="radio"] {
+      margin-top: 0.5rem;
+    }
+    textarea {
+      margin: 2rem 0;
+    }
+  }
+}

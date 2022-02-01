@@ -1,0 +1,15 @@
+footer {
+  // min-height: 6rem;
+  padding: 3rem 5rem;
+  nav {
+    a {
+      margin: 0 2rem;
+      border-bottom: solid transparent 0.15rem;
+      &:hover {
+        @include transition(0.2);
+        text-decoration: none;
+        border-color: $white;
+      }
+    }
+  }
+}
